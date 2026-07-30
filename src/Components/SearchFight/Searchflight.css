@@ -1,0 +1,83 @@
+.search-container {
+  width: 95%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px -2px 7px 0px #ece1d5;
+  padding: 45px 11vw;
+  transition: 0.3s ease-in-out;
+  border-radius: 40px;
+  background:
+    url("data:image/svg+xml,...[SVG_DATA_HERE]") center/cover,
+    linear-gradient(to right, #f4eee4, #ffffff, #dedad7, #ffffff);
+  border: 1px solid #d2ac47;
+  z-index: 1;
+}
+.main-wrp-check {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.main-wrp-check label {
+  color: #8d5c6c;
+  font-family: "OpenSansHebrewCondensed-Regular", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.main-wrp-check select {
+  background-color: transparent;
+  border: none;
+  font-family: "OpenSansHebrewCondensed-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 24px;
+}
+.main-wrp-check input {
+  background-color: transparent;
+  border: none;
+  font-family: "OpenSansHebrewCondensed-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-wrp-check select:focus {
+  border: none;
+}
+@media (max-width: 1440px) {
+  .search-container {
+    padding: 35px 100px;
+  }
+  .main-wrp-check label {
+    font-size: 15px;
+  }
+  .main-wrp-check select {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1155px) {
+  .search-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: max-content;
+    margin-top: -5%;
+  }
+  .main-wrp-check label {
+    font-size: 10px;
+  }
+  .main-wrp-check select,
+  input {
+    font-size: 10px;
+  }
+  .main-wrp-check input {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .search-container {
+    padding: 25px 50px;
+  }
+}

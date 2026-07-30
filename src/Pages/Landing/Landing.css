@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+@font-face {
+  font-family: "Moco", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/Fonts/Moco.ttf") format("ttf");
+}
+@font-face {
+  font-family: "LeAmatcky";
+  src: url("../../assets/Fonts/LeAmatcky.otf");
+}
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(244, 247, 247, 0);
+}
+.hero-container .img-wrap-hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.hero-container .img-wrap-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-container .img-wrap-hero .circle {
+  background-color: #32a6c098;
+  filter: blur(100px);
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-container .video-wrp {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-container .video-wrp .video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-container .hero-text-wrp {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  width: max-content;
+  margin-top: 100px;
+  z-index: 1;
+  color: #fff;
+}
+.hero-container .hero-text-wrp h1 {
+  font-family: "Gasoek One", sans-serif;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+}
+.hero-container .hero-text-wrp p {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-size: clamp(0.95rem, 1.4vw, 1rem);
+}
+.cta-wrp {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 40px;
+}
+.cta-wrp .CTA-btn {
+  padding: 8px 16px;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  background-color: #ffffff00;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+
+  border-radius: 32px;
+}
+.cta-wrp .CTA-btn:nth-child(1) {
+  background: linear-gradient(to right, #ae8625, #f7efba, #d2ac47, #edc967);
+  color: #7b662d;
+  font-weight: 600;
+  border: none;
+  border-radius: 32px;
+}
+.cta-wrp .CTA-btn:nth-child(2):hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.top-destinations {
+  width: 100%;
+  background: linear-gradient(to bottom, #faf6f2, #fff5eb);
+  height: max-content;
+  position: relative;
+  padding: 10.417vw;
+  padding-inline: 15.625vw;
+}
+.bgBlur {
+  position: absolute;
+  top: -5%;
+  /* filter: blur(10px); */
+  left: 0%;
+  width: 100%;
+  height: 100px;
+  background-color: #f9f5f1;
+}
+.top-destinations .text-destination-wrp {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  display: flex;
+  flex-direction: column;
+  color: #8d5c6c;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  font-weight: 600;
+}
+.top-destinations .text-destination-wrp h1 {
+  font-family: "Gasoek One", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: #562f3c;
+  letter-spacing: 1px;
+}
+.grid-wrap {
+  width: 100%;
+  height: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 55px;
+  transition: 0.3s ease-in-out;
+}
+.grid-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.grid-box.box1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.grid-box.box2 {
+  grid-column: 3/5;
+  grid-row: 1/2;
+}
+.grid-box.box3 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.grid-box.box4 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.grid-box.box5 {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.grid-box.box6 {
+  grid-column: 3/5;
+
+  grid-row: 3/4;
+}
+.grid-box .grid-img {
+  width: 100%;
+  object-fit: cover;
+}
+.label-wrp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+.label-wrp-grid {
+  display: flex;
+  flex-direction: column;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  position: absolute;
+  top: 0;
+  left: 40px;
+  pointer-events: none;
+}
+.label-wrp-grid h1 {
+  font-family: "LeAmatcky";
+  line-height: 3;
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #fff;
+}
+.label-wrp-grid p:nth-child(2) {
+  color: #edc967;
+}
+.label-wrp-grid p:nth-child(3) {
+  color: #ffffff;
+  font-weight: 600;
+}
+.grid-box .grid-bg {
+  width: 100%;
+  height: 100%;
+}
+.grid-box .grid-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+.grid-box .grid-bg:hover img {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.service-container {
+  width: 100%;
+  height: max-content;
+  position: relative;
+  margin-top: 130px;
+  padding: 6vw 15.625vw;
+}
+.service-container .vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.service-container .text-service-wrp {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  display: flex;
+  flex-direction: column;
+  color: #8d5c6c;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  font-weight: 600;
+}
+.service-container .text-service-wrp h1 {
+  font-family: "Gasoek One", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: #562f3c;
+  letter-spacing: 1px;
+}
+.service-grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 270px);
+  width: 100%;
+  height: 100%;
+  gap: 24px;
+  margin-top: 55px;
+}
+.service-grid-wrap .services-grid-box {
+  background-color: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0px 4px 10px 0px #ffecdd;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+.services-grid-box .service-wrp {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-grid-wrap .services-grid-box .service-wrp h1 {
+  font-family: "LeAmatcky";
+  line-height: 3;
+  margin: 0;
+  /* font-size: clamp(0.875rem, 1.2vw, 1rem);*/
+  font-size: 1vw;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.service-grid-wrap .services-grid-box p {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-weight: 400;
+}
+.vectorImg {
+  width: 60px;
+  height: auto;
+}
+.craftman-ship-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff8f0, #f8f2ec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  gap: 32px;
+}
+.craftman-ship-container .img-wrp-lg {
+  width: 33.854vw;
+  height: 44.271vw;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.craftman-ship-container .img-wrp-lg img {
+  width: 100%;
+}
+.craftman-ship-container .text-wrap-craft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.craftman-ship-container .text-wrap-craft p:nth-child(1) {
+  color: #8d5c6c;
+  font-weight: 600;
+}
+.craftman-ship-container .text-wrap-craft h1 {
+  font-family: "Gasoek One", sans-serif;
+  color: #562f3c;
+}
+.craftman-ship-container .text-wrap-craft p:nth-child(3) {
+  color: #000000;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+}
+.craftman-ship-container .overall {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+}
+.testimonials {
+  width: 100%;
+  height: max-content;
+  background: linear-gradient(to bottom, #f8f2ec, #ffe4c9);
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  padding: 10vw 15vw;
+}
+.testimonials .testimonial-text-wrap {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  display: flex;
+  flex-direction: column;
+  color: #8d5c6c;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  font-weight: 600;
+}
+.testimonials .testimonial-text-wrap h1 {
+  font-family: "Gasoek One", sans-serif;
+  color: #562f3c;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+.testimonials .testimonial-card-wrp {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+
+  flex-shrink: 1;
+}
+.testimonials .testimonial-card-wrp .testimonial-card {
+  width: 408px;
+  height: 270px;
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 32px;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+}
+.testimonial-card span {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  color: #ae8625;
+}
+.footer-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffe4c9, #e5aa6f);
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-family: "OpenSansHebrewCondensed-Regular";
+}
+.reserve-card {
+  text-align: center;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  width: 68.438vw;
+  padding: 16px;
+  min-height: 24.063vw;
+  background: linear-gradient(to right, #fff, #ffffff00);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0px 4px 15px 0px #d9a268;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #936273;
+  font-size: 18px;
+  top: 0;
+}
+.reserve-card p:nth-child(3) {
+  color: #000;
+  font-weight: 400;
+}
+.reserve-card h1 {
+  font-family: "Gasoek One", sans-serif;
+  color: #562f3c;
+  font-size: 4vw;
+}
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px 15.625vw;
+  gap: 90px;
+  margin-bottom: 55px;
+}
+.footer-wrap .logo-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-transform: uppercase;
+}
+.footer-wrap .logo-sec img {
+  width: 160px;
+}
+.footer-wrap .footer-links-wrap {
+  display: flex;
+  gap: 120px;
+  font-family: "OpenSansHebrewCondensed-Regular";
+
+  flex-wrap: wrap;
+}
+.footer-wrap .footer-links-wrap .footerlinks {
+  display: flex;
+  flex-direction: column;
+}
+.footer-wrap .footer-links-wrap .footerlinks label {
+  font-weight: 600;
+  color: #936273;
+}
+.footer-wrap .footer-links-wrap .footerlinks .link-footer {
+  text-decoration: none;
+  color: #4c4c4c;
+}
+.social-links {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff3d;
+  border-radius: 50%;
+}
+.social-links .vector-social {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.social-link-wrps {
+  display: flex;
+  gap: 16px;
+}
+.back-to-top {
+  padding: 16px 24px;
+  background: #ffffff;
+  color: #000;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  border-radius: 24px;
+  border: none;
+  font-family: "OpenSansHebrewCondensed-Regular";
+  font-size: 24px;
+}
+@media (max-width: 1440px) {
+  .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .grid-box.box1 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .grid-box.box2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .grid-box.box3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .grid-box.box4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .grid-box.box5 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .grid-box.box6 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+@media (max-width: 1550px) {
+  .top-destinations {
+    padding-inline: 5.208vw;
+  }
+  .service-container {
+    padding-inline: 5.208vw;
+  }
+  .craftman-ship-container {
+    padding-inline: 5.208vw;
+    height: 500px;
+  }
+  .craftman-ship-container .text-wrap-craft p:nth-child(1) {
+    color: #8d5c6c;
+    font-weight: 600;
+    font-size: 1vw;
+  }
+  .craftman-ship-container .text-wrap-craft h1 {
+    font-family: "Gasoek One", sans-serif;
+    color: #562f3c;
+    font-size: 2vw;
+  }
+  .craftman-ship-container .text-wrap-craft p:nth-child(3) {
+    font-weight: 400;
+    font-size: 1vw;
+  }
+}

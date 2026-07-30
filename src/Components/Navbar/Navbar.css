@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Moco";
+  src: url("../../assets/Fonts/Moco.ttf");
+}
+@font-face {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  src: url("https://static.wfonts.com/data/2016/07/12/open-sans-hebrew-condensed/OpenSansHebrewCondensed-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+.animated-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: #ffffffa6;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.ham {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid red;
+  justify-content: center;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+.ham .ham-line {
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.close {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  display: none;
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0;
+  height: 85px;
+  padding: 24px;
+  align-items: center;
+  padding: 0px 8.333vw;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  transition: 0.8s ease-in-out;
+}
+.navbar.scrolled .animated-background {
+  top: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 60px;
+  opacity: 1;
+}
+.navbar.scrolled {
+  top: 40px;
+  width: 80%;
+  border-radius: 60px;
+  padding: 0px 4.333vw;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+}
+.navbar.scrolled .nav-links .main-link {
+  color: #000;
+}
+.navbar.scrolled .logo-wrapper .logo:nth-child(1) {
+  display: none;
+}
+.navbar.scrolled .logo-wrapper .logo:nth-child(2) {
+  display: block;
+}
+.logo-wrapper .logo:nth-child(2) {
+  display: none;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+}
+.main-link {
+  font-family: "OpenSansHebrewCondensed-Regular", sans-serif;
+  font-size: 16px;
+  /* font-weight: 600; */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #ffffff00;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.main-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff; /* Fill color */
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.main-link:hover {
+  color: #000;
+}
+.main-link:hover::before {
+  transform: scaleY(1);
+}
+
+.right-links {
+  display: flex;
+  gap: 16px;
+}
+
+.right-link {
+  padding: 8px 16px;
+  font-family: "OpenSansHebrewCondensed-Regular", sans-serif;
+  text-decoration: none;
+  border-radius: 32px;
+  color: #fff;
+}
+.right-link:nth-child(1) {
+  position: relative;
+  background-color: #ffffff00;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.right-link:nth-child(1)::before {
+  content: "";
+  background-color: #fff;
+  transform: scaleY(0);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.right-link:nth-child(1):hover {
+  color: #000;
+}
+.right-link:nth-child(1):hover::before {
+  transform: scaleX(1);
+}
+.right-link:nth-child(2) {
+  background: linear-gradient(to right, #ae8625, #f7efba, #d2ac47, #edc967);
+  color: #7b662d;
+  font-weight: 600;
+}
+
+@media (max-width: 1600px) {
+  .nav-links {
+    gap: 16px;
+  }
+}
+@media (max-width: 1400px) {
+  .logo-wrapper {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  .ham {
+    display: flex;
+  }
+  .close {
+    display: flex;
+  }
+  .nav-links {
+    left: 0;
+    transform: translate(-150%);
+    top: -50%;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 120px 100px;
+    z-index: 2;
+    transition: 1s ease-in-out;
+  }
+
+  .nav-links.sidebar {
+    transform: translate(0%);
+    display: flex;
+
+    transition: 1s ease-in-out;
+  }
+
+  .main-link {
+    color: #000;
+    font-weight: 600;
+    font-size: 55px;
+  }
+}

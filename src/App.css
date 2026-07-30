@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Hebrew+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Gasoek One Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/assets/Fonts/GasoekOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSansHebrewCondensed-Regular";
+  src: url("https://static.wfonts.com/data/2016/07/12/open-sans-hebrew-condensed/OpenSansHebrewCondensed-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
