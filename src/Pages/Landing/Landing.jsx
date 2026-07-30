@@ -1,5 +1,17 @@
 import { inView, scale } from "motion";
 import { useEffect, useState } from "react";
+import bgImage from "../../assets/hero.png";
+import paris from "../../assets/Images/Paris.jpg";
+import tokyo from "../../assets/Images/Tokyo.jpg";
+import dubai from "../../assets/Images/Dubai.png";
+import maldive from "../../assets/Images/Maldives.jpg";
+import santorini from "../../assets/Images/Santorini.jpg";
+import swiss from "../../assets/Images/Swiss.jpg";
+import curved from "../../assets/Images/VectorCurved.jpg";
+import glass from "../../assets/Vector/vector3.png";
+import card from "../../assets/Vector/vector.png";
+import seat from "../../assets/Vector/vector2.png";
+import craft from "../../assets/Images/InteriorPlane.png";
 import "./Landing.css";
 import Button from "../../Components/Button/Button";
 import { motion, stagger } from "motion/react";
@@ -72,7 +84,7 @@ function Landing() {
             animate={{ scale: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <img src="src\assets\hero.png" alt="" />
+            <img src={bgImage} alt="" />
           </motion.div>
           <div className="video-wrp">
             <video autoPlay muted loop playsInline className="video">
@@ -150,7 +162,7 @@ function Landing() {
                 <p>CDG8H 15M NONSTOP</p>
               </div>
               <div className="grid-bg">
-                <img src="src\assets\Images\Paris.jpg" alt="" />
+                <img src={paris} alt="" />
               </div>
               <div className="icon-wrap-grid"></div>
             </motion.div>
@@ -161,7 +173,7 @@ function Landing() {
                 <p>CDG8H 15M NONSTOP</p>
               </div>
               <div className="grid-bg">
-                <img src="src\assets\Images\Tokyo.jpg" alt="" />
+                <img src={tokyo} alt="" />
               </div>
             </motion.div>
             <motion.div className="grid-box box3" variants={gridItem}>
@@ -181,7 +193,7 @@ function Landing() {
                 <p>CDG8H 15M NONSTOP</p>
               </div>
               <div className="grid-bg">
-                <img src="src\assets\Images\Maldives.jpg" alt="" />
+                <img src={maldive} alt="" />
               </div>
             </motion.div>
             <motion.div className="grid-box box5" variants={gridItem}>
@@ -191,7 +203,7 @@ function Landing() {
                 <p>CDG8H 15M NONSTOP</p>
               </div>
               <div className="grid-bg">
-                <img src="src\assets\Images\Santorini.jpg" alt="" />
+                <img src={santorini} alt="" />
               </div>
             </motion.div>
             <motion.div className="grid-box box6" variants={gridItem}>
@@ -201,7 +213,7 @@ function Landing() {
                 <p>CDG8H 15M NONSTOP</p>
               </div>
               <div className="grid-bg">
-                <img src="src\assets\Images\Swiss.jpg" alt="" />
+                <img src={swiss} alt="" />
               </div>
             </motion.div>
           </motion.div>
@@ -221,11 +233,7 @@ function Landing() {
               remove one more reason to notice you're airborne.
             </p>
           </motion.div>
-          <img
-            src="src\assets\Images\VectorCurved.jpg"
-            alt=""
-            className="vector"
-          />
+          <img src={curved} alt="" className="vector" />
           <motion.div
             className="service-grid-wrap"
             variants={gridContainer}
@@ -235,11 +243,7 @@ function Landing() {
           >
             <motion.div className="services-grid-box" variants={gridItem}>
               <div className="service-wrp">
-                <img
-                  src="src\assets\Vector\vector2.png"
-                  alt=""
-                  className="vectorImg"
-                />
+                <img src={seat} alt="" className="vectorImg" />
                 <h1>Private Lounges</h1>
                 <p>
                   Depart from stillness. Dedicated suites, showers, and <br />
@@ -249,11 +253,7 @@ function Landing() {
             </motion.div>
             <motion.div className="services-grid-box" variants={gridItem}>
               <div className="service-wrp">
-                <img
-                  src="src\assets\Vector\vector3.png"
-                  alt=""
-                  className="vectorImg"
-                />
+                <img src={glass} alt="" className="vectorImg" />
                 <h1>First Class Dining</h1>
                 <p>
                   Seasonal menus built with three-starred chefs, plated <br />
@@ -264,11 +264,7 @@ function Landing() {
             <motion.div className="services-grid-box" variants={gridItem}>
               <div className="service-wrp">
                 {" "}
-                <img
-                  src="src\assets\Vector\vector.png"
-                  alt=""
-                  className="vectorImg"
-                />
+                <img src={card} alt="" className="vectorImg" />
                 <h1>Luxury Cabins</h1>
                 <p>
                   Fully enclosed suites with lie-flat beds, dressed in <br />
@@ -350,7 +346,7 @@ function Landing() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div className="img-wrp-lg" variants={gridItem}>
-            <img src="src\assets\Images\InteriorPlane.png" alt="" />
+            <img src={craft} alt="" />
           </motion.div>
           <motion.div className="text-wrap-craft" variants={gridItem}>
             <p>Craftsmanship</p>
